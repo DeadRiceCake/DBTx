@@ -5,7 +5,7 @@ const db2 = require("../lib/database2"); // 동기형 DB pool
 exports.insert = function (num1) {
   let queryString = `
     INSERT INTO
-      tx.tx1(tx1)
+      table1(column1)
     VALUES
       (?)
       ;
@@ -20,14 +20,14 @@ exports.useTransaction = async function (num1) {
   try {
     let queryString1 = `
       INSERT INTO
-        tx1(tx1)
+        table1(column1)
       VALUES
         (${num1})
     `;
 
     let queryString2 = `
       INSERT INTO
-        tx2(tx2)
+        table2(column2)
       VALUES
         (${num1})
     `;
