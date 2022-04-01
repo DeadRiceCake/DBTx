@@ -8,7 +8,7 @@ router
     try {
       let transaction = await mTx.useTransaction(11);
 
-      if (transaction) {
+      if (transaction) { // 트랜잭션 중간에 오류 발생 시 
         return res.status(400).json({ code: 0, reason: "bad request" });
       }
 
